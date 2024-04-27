@@ -17,4 +17,17 @@ class Character {
       required this.gender,
       required this.image,
       required this.created});
+
+  factory Character.fromJson(Map<String, dynamic> json) {
+    return Character(
+      id: json['id'] ,
+      name: json['name'],
+      status: json['status'],
+      species: json['species'],
+      type: json['type'],
+      gender: json['gender'],
+      image: json['image'],
+      created: json['created'],
+    );
+  }
 }
