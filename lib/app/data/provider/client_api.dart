@@ -10,7 +10,7 @@ class ApiClient implements Rest{
   @override
   Future<http.Response> get(String path, {Map<String, dynamic>? params}) async{
     final url = Uri.http(_baseUrl, '/api/$path',params);
-    return await http.get(url,headers: header);
+    return await http.get(url, headers: header);
   }
 
 }
