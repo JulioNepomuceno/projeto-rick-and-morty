@@ -6,7 +6,7 @@ class CharacterRepository{
 
   final ApiClient _apiClient = ApiClient();
 
-  Future<http.Response> getCharacters()async{
-    return await _apiClient.get('character');
+  Future<http.Response> getCharacters(String? search)async{
+    return await _apiClient.get('character', params:{'name':search} );
   }
 }

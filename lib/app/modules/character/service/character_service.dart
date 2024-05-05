@@ -9,9 +9,9 @@ import '../../../data/errors/exceptions.dart';
 class CharacterService {
   final CharacterRepository _characherRepository = CharacterRepository();
 
-  Future<List<Character>> getAllCharacters() async {
+  Future<List<Character>> getAllCharacters(String? search) async {
     try {
-      final response = await _characherRepository.getCharacters();
+      final response = await _characherRepository.getCharacters(search);
       if (response.statusCode == 200) {
         final data = jsonDecode(response.body);
         final characters = (data['results'] as List).map((json) => Character.fromJson(json)).toList();

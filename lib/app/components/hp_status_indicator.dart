@@ -7,6 +7,7 @@ class StatusIndicator extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    
     // Mapa de cores para cada status
     final Map<String, Color> statusColors = {
       'alive': Colors.green,
