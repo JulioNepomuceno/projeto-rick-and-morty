@@ -39,6 +39,7 @@ class _CharacterViewState extends State<CharacterView> {
                   top: 20, bottom: 10, right: 20, left: 20),
               onChanged: (value) {
                 controller.onSearchDebounce(value);
+                
               },
             ),
           ),
@@ -88,7 +89,7 @@ class _CharacterViewState extends State<CharacterView> {
                                     Text(
                                       character.name,
                                       overflow: TextOverflow.ellipsis,
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                           fontSize: 15,
                                           fontWeight: FontWeight.w700,
                                           color: Colors.white),
@@ -103,7 +104,7 @@ class _CharacterViewState extends State<CharacterView> {
                                         Text(
                                           '${character.status}-${character.species}',
                                           overflow: TextOverflow.ellipsis,
-                                          style: TextStyle(
+                                          style: const TextStyle(
                                               color: Colors.white,
                                               fontWeight: FontWeight.w300),
                                         ),

@@ -1,5 +1,4 @@
 import 'package:http/http.dart' as http;
-
 import 'package:projeto_rick_and_morty/app/data/provider/client_api.dart';
 
 class CharacterRepository{
