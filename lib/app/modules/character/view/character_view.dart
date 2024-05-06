@@ -24,8 +24,8 @@ class _CharacterViewState extends State<CharacterView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 34, 146, 173),
-        title: const Center(child: Text('Personagens')),
+        backgroundColor: const Color.fromARGB(255, 34, 146, 173),
+        title: const Center(child: Text('Rick And Morty - Personagens', style: TextStyle(color:Colors.white,fontWeight: FontWeight.w300),)),
       ),
       body: Column(
         children: [
