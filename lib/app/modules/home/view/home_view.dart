@@ -41,7 +41,7 @@ class _HomeViewState extends State<HomeView> {
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: const Color.fromARGB(255, 34, 146, 173),
         unselectedItemColor: Colors.white,
-        selectedItemColor: Colors.grey[800],
+        selectedItemColor: Color.fromARGB(255, 253, 228, 0),
         currentIndex: paginaAtual,
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.person_2,), label: 'Personagens',),

@@ -18,7 +18,7 @@ class _EpisodeViewState extends State<EpisodeView> {
     return Scaffold(
       appBar: AppBar(
           backgroundColor: const Color.fromARGB(255, 34, 146, 173),
-          title: const Center(child: Text('Episodios'))),
+          title: const Center(child: Text('Rick And Morty - Episodios', style: TextStyle(color: Colors.white,fontWeight: FontWeight.w300),))),
       body: SingleChildScrollView(
         padding: const EdgeInsets.only(top: 20,bottom: 20),
           child: Center(
