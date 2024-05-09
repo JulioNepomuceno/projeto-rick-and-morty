@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:projeto_rick_and_morty/app/modules/home/view/home_view.dart';
+import 'package:projeto_rick_and_morty/theme/theme_data.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,12 +14,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Rick and Morty',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor:Color.fromARGB(255, 34, 146, 173)),
-        useMaterial3: true,
-      ),
+      theme: CustomThemeData.light(),
+      darkTheme: CustomThemeData.dark(),
+      themeMode: ThemeMode.system,
       home: const HomeView(),
     );
   }
 }
-
