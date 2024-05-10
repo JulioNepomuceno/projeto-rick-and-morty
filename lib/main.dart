@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projeto_rick_and_morty/app/modules/character/view/detail_character.dart';
 import 'package:projeto_rick_and_morty/app/modules/home/view/home_view.dart';
 import 'package:projeto_rick_and_morty/theme/theme_data.dart';
 
@@ -18,6 +19,10 @@ class MyApp extends StatelessWidget {
       darkTheme: CustomThemeData.dark(),
       themeMode: ThemeMode.system,
       home: const HomeView(),
+      routes: {
+        '/detailcharacter': (context) => const DetailCharacter()
+      },
     );
+    
   }
 }

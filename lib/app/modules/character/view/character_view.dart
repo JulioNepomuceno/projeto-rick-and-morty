@@ -67,49 +67,52 @@ class _CharacterViewState extends State<CharacterView> {
                             padding: const EdgeInsets.all(10),
                             itemBuilder: (context, index) {
                               final character = controller.character[index];
-                              return Container(
-                                decoration: const BoxDecoration(
-                                  color: Color.fromARGB(255, 34, 146, 173),
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(10)),
-                                ),
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    ClipRRect(
-                                      borderRadius: const BorderRadius.all(
-                                          Radius.circular(15)),
-                                      child: Image.network(
-                                        character.image,
-                                        height: 100.0,
-                                        fit: BoxFit.cover,
+                              return GestureDetector(
+                                  onTap: ()=>controller.selecCharacter(character,context),
+                                child: Container(
+                                  decoration: const BoxDecoration(
+                                    color: Color.fromARGB(255, 34, 146, 173),
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(10)),
+                                  ),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      ClipRRect(
+                                        borderRadius: const BorderRadius.all(
+                                            Radius.circular(15)),
+                                        child: Image.network(
+                                          character.image,
+                                          height: 100.0,
+                                          fit: BoxFit.cover,
+                                        ),
                                       ),
-                                    ),
-                                    Text(
-                                      character.name,
-                                      overflow: TextOverflow.ellipsis,
-                                      style: const TextStyle(
-                                          fontSize: 15,
-                                          fontWeight: FontWeight.w700,
-                                          color: Colors.white),
-                                    ),
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        StatusIndicator(
-                                          status: character.status,
-                                        ),
-                                        Text(
-                                          '${character.status}-${character.species}',
-                                          overflow: TextOverflow.ellipsis,
-                                          style: const TextStyle(
-                                              color: Colors.white,
-                                              fontWeight: FontWeight.w300),
-                                        ),
-                                      ],
-                                    ),
-                                  ],
+                                      Text(
+                                        character.name,
+                                        overflow: TextOverflow.ellipsis,
+                                        style: const TextStyle(
+                                            fontSize: 15,
+                                            fontWeight: FontWeight.w700,
+                                            color: Colors.white),
+                                      ),
+                                      Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          StatusIndicator(
+                                            status: character.status,
+                                          ),
+                                          Text(
+                                            '${character.status}-${character.species}',
+                                            overflow: TextOverflow.ellipsis,
+                                            style: const TextStyle(
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.w300),
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               );
                             });

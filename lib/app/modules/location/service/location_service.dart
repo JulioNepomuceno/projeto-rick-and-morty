@@ -10,9 +10,9 @@ class LocationService{
 
    final LocationRepository _locationrepository = LocationRepository();
 
-  Future<List<Location>> getAllLocations() async {
+  Future<List<Location>> getAllLocations(String? search) async {
     try {
-      final response = await _locationrepository.getLocations();
+      final response = await _locationrepository.getLocations(search);
       if (response.statusCode == 200) {
         final data = jsonDecode(response.body);
         final characters = (data['results'] as List).map((json) => Location.fromJson(json)).toList();

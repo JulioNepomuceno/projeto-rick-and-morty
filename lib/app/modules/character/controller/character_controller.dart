@@ -5,7 +5,9 @@ import 'package:projeto_rick_and_morty/app/data/models/character_model.dart';
 import 'package:projeto_rick_and_morty/app/modules/character/service/character_service.dart';
 
 class CharacterController extends ChangeNotifier {
+
   final CharacterService _service = CharacterService();
+
 
   Timer? _debounce;
   List<Character> character = [];
@@ -27,4 +29,9 @@ class CharacterController extends ChangeNotifier {
       getAllCharacter(search);
     });
   }
+
+ void selecCharacter(Character character, BuildContext context) {
+  Navigator.pushNamed(context, '/detailcharacter', arguments: character);
+ }
+  
 }

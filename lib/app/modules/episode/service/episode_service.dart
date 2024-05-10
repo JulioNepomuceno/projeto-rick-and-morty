@@ -9,9 +9,9 @@ import '../../../data/errors/exceptions.dart';
 class EpisodeService {
   final EpisodeRepository _episodeRepository = EpisodeRepository();
 
-  Future<List<Episode>> getAllEpisodes() async {
+  Future<List<Episode>> getAllEpisodes(String? search) async {
     try {
-      final response = await _episodeRepository.getEpisodes();
+      final response = await _episodeRepository.getEpisodes(search);
       if (response.statusCode == 200) {
         final data = jsonDecode(response.body);
         final episodes = (data['results'] as List).map((json) => Episode.fromJson(json)).toList();

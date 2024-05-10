@@ -5,7 +5,7 @@ class EpisodeRepository{
 
   final ApiClient _apiClient = ApiClient();
 
-  Future<http.Response> getEpisodes()async{
-    return await _apiClient.get('episode' );
+  Future<http.Response> getEpisodes(String? search)async{
+    return await _apiClient.get('episode', params:{'name':search} );
   }
 }

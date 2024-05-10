@@ -5,8 +5,8 @@ class LocationRepository{
   
   final ApiClient _apiClient = ApiClient();
 
-  Future<http.Response> getLocations()async{
-    return await _apiClient.get('location' );
+  Future<http.Response> getLocations(String? search)async{
+    return await _apiClient.get('location', params:{'name':search} );
   }
 
 }
