@@ -20,11 +20,9 @@ class _EpisodeViewState extends State<EpisodeView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          backgroundColor: const Color.fromARGB(255, 34, 146, 173),
           title: const Center(
               child: Text(
             'Rick And Morty - Episodios',
-            style: TextStyle(color: Colors.white, fontWeight: FontWeight.w300),
           ))),
       body: Center(
         child: Column(

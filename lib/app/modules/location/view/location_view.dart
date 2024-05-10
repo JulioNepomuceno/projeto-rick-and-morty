@@ -19,11 +19,10 @@ class _LocationViewState extends State<LocationView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          backgroundColor: const Color.fromARGB(255, 34, 146, 173),
           title: const Center(
               child: Text(
             'Rick And Morty - Localização',
-            style: TextStyle(color: Colors.white, fontWeight: FontWeight.w300),
+           
           ))),
       body: Center(
         child: Column(
@@ -63,6 +62,8 @@ class _LocationViewState extends State<LocationView> {
                                 children: controller.itens
                                     .map<ExpansionPanel>((item) {
                                   return ExpansionPanel(
+                                    backgroundColor:
+                                          Theme.of(context).primaryColor,
                                       isExpanded: item.isExpanded,
                                       headerBuilder: (context, isExpanded) {
                                         return ListTile(

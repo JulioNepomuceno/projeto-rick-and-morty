@@ -23,15 +23,18 @@ class CardCharacter extends StatelessWidget {
               size: 50,
             ),
           ),
-          child: Container(
-            width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height * 0.5,
-            decoration: BoxDecoration(
-                color: Colors.grey,
-                image: DecorationImage(
-                    image: NetworkImage(character.image ?? ''),
-                    fit: BoxFit.cover),
-                borderRadius: BorderRadius.circular(5)),
+          child: Hero(
+            tag: character.id,
+            child: Container(
+              width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.height * 0.5,
+              decoration: BoxDecoration(
+                  color: Colors.grey,
+                  image: DecorationImage(
+                      image: NetworkImage(character.image ?? ''),
+                      fit: BoxFit.cover),
+                  borderRadius: BorderRadius.circular(5)),
+            ),
           ),
         ),
         Column(
@@ -45,18 +48,18 @@ class CardCharacter extends StatelessWidget {
               children: [
                 Text(
                   character.species,
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                 ),
                 const Text(' - '),
                 Text(
                   character.gender,
-                  style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),
+                  style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),
                 )
               ],
             ),
             Text(
               character.status,
-              style: TextStyle(fontSize: 18),
+              style: TextStyle(fontSize: 19),
             )
           ],
         )

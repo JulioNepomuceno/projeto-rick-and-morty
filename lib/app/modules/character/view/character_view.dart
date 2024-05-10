@@ -78,13 +78,16 @@ class _CharacterViewState extends State<CharacterView> {
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
-                                      ClipRRect(
-                                        borderRadius: const BorderRadius.all(
-                                            Radius.circular(15)),
-                                        child: Image.network(
-                                          character.image,
-                                          height: 100.0,
-                                          fit: BoxFit.cover,
+                                      Hero(
+                                        tag: character.id,
+                                        child: ClipRRect(
+                                          borderRadius: const BorderRadius.all(
+                                              Radius.circular(15)),
+                                          child: Image.network(
+                                            character.image,
+                                            height: 100.0,
+                                            fit: BoxFit.cover,
+                                          ),
                                         ),
                                       ),
                                       Text(

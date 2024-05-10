@@ -31,7 +31,7 @@ class _HomeViewState extends State<HomeView> {
     return Scaffold(
       body: PageView(
         controller: pageController,
-        children: [
+         children :  [
           CharacterView(),
           EpisodeView(),
           LocationView()
@@ -39,9 +39,7 @@ class _HomeViewState extends State<HomeView> {
         onPageChanged: setPaginaAtual,
       ),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: const Color.fromARGB(255, 34, 146, 173),
-        unselectedItemColor: Colors.white,
-        selectedItemColor: Color.fromARGB(255, 253, 228, 0),
+       
         currentIndex: paginaAtual,
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.person_2,), label: 'Personagens',),
