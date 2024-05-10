@@ -45,6 +45,7 @@ class _EpisodeViewState extends State<EpisodeView> {
                             children:
                                 controller.itens.map<ExpansionPanel>((item) {
                               return ExpansionPanel(
+                                  backgroundColor: Theme.of(context).primaryColor,
                                   isExpanded: item.isExpanded,
                                   headerBuilder: (context, isExpanded) {
                                     return ListTile(

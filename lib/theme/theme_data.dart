@@ -26,8 +26,10 @@ static ThemeData light(){
 static ThemeData dark(){
   return ThemeData(
       colorScheme: const ColorScheme.dark(primary: primaryColors),
+      primaryColor: Colors.black,
       scaffoldBackgroundColor: Colors.black,
       appBarTheme: const AppBarTheme(
+        
         color: primaryColors,
         titleTextStyle: TextStyle(
           color: Colors.white,
@@ -36,6 +38,7 @@ static ThemeData dark(){
           overflow: TextOverflow.ellipsis,
         ),iconTheme: IconThemeData(color: Colors.red)
       ),
+      
   );
 }
 
